@@ -14,4 +14,29 @@ Content-Type: application/json
 GET http://localhost:8080/api/podcasts
 
 ###
+POST http://localhost:8080/api/podcasts
+Content-Type: application/json
+
+{
+  "date": "20.01.2000",
+  "type": "PODCAST"
+}
+
+###
 GET http://localhost:8080/api/audiobooks
+
+###
+POST http://localhost:8080/api/audiobooks
+Content-Type: application/json
+
+{
+  "chapters": [
+    {
+      "title": "Hand of Titan"
+    },
+    {
+      "title": "Storms of Capella"
+    }
+  ],
+  "type": "AUDIOBOOK"
+}

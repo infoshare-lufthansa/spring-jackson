@@ -30,9 +30,19 @@ public class RecordingsController {
         return recordingRepository.findPodcasts();
     }
 
+    @PostMapping("/api/podcasts")
+    public void createPodcast(@RequestBody Podcast podcast) {
+        recordingRepository.saveRecording(podcast);
+    }
+
     @GetMapping("/api/audiobooks")
     public List<AudioBook> getAudiobooks() {
         return recordingRepository.findAudiobooks();
+    }
+
+    @PostMapping("/api/audiobooks")
+    public void createAudiobook(@RequestBody AudioBook audioBook) {
+        recordingRepository.saveRecording(audioBook);
     }
 
     @GetMapping("/api/recordings")
