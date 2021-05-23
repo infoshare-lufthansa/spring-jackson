@@ -6,6 +6,7 @@ public interface Recording {
     @JsonIgnore
     Integer getId();
     RecordingType getType();
+    String getTitle();
     Recording withId(Integer id);
 
     default RecordingId getExternalId() {

@@ -11,6 +11,8 @@ import java.time.LocalDate;
 public class Podcast implements Recording {
     @With
     Integer id;
+    String title;
+
     @JsonProperty("date")
     @JsonFormat(pattern = "dd.MM.yyyy")
     LocalDate dateOfRecording;

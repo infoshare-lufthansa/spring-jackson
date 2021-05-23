@@ -11,6 +11,7 @@ import java.util.List;
 public class AudioBook implements Recording {
     @With
     Integer id;
+    String title;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     List<AudioBookChapter> chapters;
 

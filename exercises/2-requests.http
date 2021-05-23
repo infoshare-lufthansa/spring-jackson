@@ -18,6 +18,7 @@ POST http://localhost:8080/api/recordings
 Content-Type: application/json
 
 {
+  "title": "Helpprism",
    "date": "20.01.2000",
    "type": "PODCAST"
 }
@@ -27,6 +28,7 @@ POST http://localhost:8080/api/recordings
 Content-Type: application/json
 
 {
+  "title": "The Sons of the Nova",
   "chapters": [
     {
       "title": "Hand of Titan"
