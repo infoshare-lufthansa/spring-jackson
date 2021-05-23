@@ -10,7 +10,7 @@ Content-Type: application/json
 {
   "subject": "Stop Work, Time For Days",
   "duration": "PT2M19S",
-  "type": "SONG"
+  "recordingType": "SONG"
 }
 
 ###
@@ -20,7 +20,7 @@ Content-Type: application/json
 {
   "title": "Helpprism",
    "date": "20.01.2000",
-   "type": "PODCAST"
+   "recordingType": "PODCAST"
 }
 
 ###
@@ -37,6 +37,6 @@ Content-Type: application/json
       "title": "Storms of Capella"
     }
   ],
-  "type": "AUDIOBOOK"
+  "recordingType": "AUDIOBOOK"
 }
 
