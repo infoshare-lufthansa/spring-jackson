@@ -9,6 +9,7 @@ import java.util.List;
 public class AudioBook implements Recording {
     @With
     Integer id;
+    String title;
     List<AudioBookChapter> chapters;
 
     @Override

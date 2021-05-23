@@ -6,8 +6,7 @@ Content-Type: application/json
 
 {
   "subject": "Stop Work, Time For Days",
-  "duration": "PT2M19S",
-  "type": "SONG"
+  "duration": "PT2M19S"
 }
 
 ###
@@ -18,8 +17,8 @@ POST http://localhost:8080/api/podcasts
 Content-Type: application/json
 
 {
-  "date": "20.01.2000",
-  "type": "PODCAST"
+  "title": "Helpprism",
+  "date": "20.01.2000"
 }
 
 ###
@@ -30,6 +29,7 @@ POST http://localhost:8080/api/audiobooks
 Content-Type: application/json
 
 {
+  "title": "The Sons of the Nova",
   "chapters": [
     {
       "title": "Hand of Titan"
@@ -37,6 +37,5 @@ Content-Type: application/json
     {
       "title": "Storms of Capella"
     }
-  ],
-  "type": "AUDIOBOOK"
+  ]
 }

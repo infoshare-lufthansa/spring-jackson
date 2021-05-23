@@ -26,9 +26,9 @@ public class RecordingRepository {
         recordings.add(new Song(idGenerator.getAndIncrement(), "Napping Woman", Duration.ofSeconds(349)));
 
         var chapters = List.of("Outrun the shadow", "Plague of Fear", "Trained for Sin").stream().map(AudioBookChapter::new).collect(Collectors.toList());
-        recordings.add(new AudioBook(idGenerator.getAndIncrement(), chapters));
+        recordings.add(new AudioBook(idGenerator.getAndIncrement(), "Oceans of Polaris", chapters));
 
-        recordings.add(new Podcast(idGenerator.getAndIncrement(), LocalDate.of(2020, Month.FEBRUARY, 29)));
+        recordings.add(new Podcast(idGenerator.getAndIncrement(), "Software Fan Banter", LocalDate.of(2020, Month.FEBRUARY, 29)));
     }
 
     public List<Recording> findRecordings() {

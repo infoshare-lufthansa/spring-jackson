@@ -9,6 +9,7 @@ import java.time.LocalDate;
 public class Podcast implements Recording {
     @With
     Integer id;
+    String title;
     LocalDate dateOfRecording;
 
     @Override
