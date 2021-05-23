@@ -9,6 +9,7 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
@@ -48,5 +49,9 @@ public class RecordingRepository {
 
     public List<AudioBook> findAudiobooks() {
         return recordings.stream().filter(r -> r instanceof AudioBook).map(r -> (AudioBook) r).collect(Collectors.toList());
+    }
+
+    public List<Recording> findById(Integer id) {
+        return recordings.stream().filter(r -> Objects.equals(r.getId(), id)).collect(Collectors.toList());
     }
 }

@@ -1,0 +1,40 @@
+GET http://localhost:8080/api/recordings
+
+###
+GET http://localhost:8080/api/recordings/3
+
+###
+POST http://localhost:8080/api/recordings
+Content-Type: application/json
+
+{
+  "subject": "Stop Work, Time For Days",
+  "duration": "PT2M19S",
+  "type": "SONG"
+}
+
+###
+POST http://localhost:8080/api/recordings
+Content-Type: application/json
+
+{
+   "date": "20.01.2000",
+   "type": "PODCAST"
+}
+
+###
+POST http://localhost:8080/api/recordings
+Content-Type: application/json
+
+{
+  "chapters": [
+    {
+      "title": "Hand of Titan"
+    },
+    {
+      "title": "Storms of Capella"
+    }
+  ],
+  "type": "AUDIOBOOK"
+}
+

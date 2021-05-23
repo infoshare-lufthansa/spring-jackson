@@ -1,9 +1,7 @@
 package pl.infoshare.jackson.recordings;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.infoshare.jackson.recordings.model.AudioBook;
 import pl.infoshare.jackson.recordings.model.Podcast;
 import pl.infoshare.jackson.recordings.model.Recording;
@@ -22,6 +20,11 @@ public class RecordingsController {
         return recordingRepository.findSongs();
     }
 
+    @PostMapping("/api/songs")
+    public void createSong(@RequestBody Song song) {
+        recordingRepository.saveRecording(song);
+    }
+
     @GetMapping("/api/podcasts")
     public List<Podcast> getPodcasts() {
         return recordingRepository.findPodcasts();
@@ -37,8 +40,13 @@ public class RecordingsController {
         return recordingRepository.findRecordings();
     }
 
+    @GetMapping("/api/recordings/{id}")
+    public List<Recording> getRecording(@PathVariable Integer id) {
+        return recordingRepository.findById(id);
+    }
+
     @PostMapping("/api/recordings")
-    public void getRecordings(Recording recording) {
+    public void getRecordings(@RequestBody Recording recording) {
         recordingRepository.saveRecording(recording);
     }
 }

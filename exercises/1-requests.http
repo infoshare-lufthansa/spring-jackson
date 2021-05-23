@@ -1,0 +1,17 @@
+GET http://localhost:8080/api/songs
+
+###
+POST http://localhost:8080/api/songs
+Content-Type: application/json
+
+{
+  "subject": "Stop Work, Time For Days",
+  "duration": "PT2M19S",
+  "type": "SONG"
+}
+
+###
+GET http://localhost:8080/api/podcasts
+
+###
+GET http://localhost:8080/api/audiobooks
