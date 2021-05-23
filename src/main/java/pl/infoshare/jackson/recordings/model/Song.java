@@ -5,7 +5,6 @@ import lombok.With;
 
 import java.time.Duration;
 
-// zmiany nazw, @JsonProperty
 @Value
 public class Song implements Recording {
     @With
