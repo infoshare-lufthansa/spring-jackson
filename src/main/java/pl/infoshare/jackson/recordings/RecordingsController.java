@@ -1,11 +1,14 @@
 package pl.infoshare.jackson.recordings;
 
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonView;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import pl.infoshare.jackson.recordings.model.AudioBook;
 import pl.infoshare.jackson.recordings.model.Podcast;
 import pl.infoshare.jackson.recordings.model.Recording;
 import pl.infoshare.jackson.recordings.model.Song;
+import pl.infoshare.jackson.recordings.views.RecordingView;
 
 import java.util.List;
 
@@ -46,6 +49,7 @@ public class RecordingsController {
     }
 
     @GetMapping("/api/recordings")
+    @JsonView(RecordingView.List.class)
     public List<Recording> getRecordings() {
         return recordingRepository.findRecordings();
     }
